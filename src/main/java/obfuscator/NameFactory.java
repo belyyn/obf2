@@ -190,7 +190,7 @@ public class NameFactory {
             cn = new ClassNode();
             cr.accept(cn, 0);
         } catch (IOException e) {
-            logger.error("Couldn't read super class of " + node.name); // May or may not matter
+            logger.info("Couldn't read super class of " + node.name); // May or may not matter
             return false;                                              // Obfuscation can still be successful
         }
         for (MethodNode superMethod : cn.methods) {
